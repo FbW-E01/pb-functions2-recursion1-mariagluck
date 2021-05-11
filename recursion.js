@@ -1,9 +1,19 @@
 // #### Calculate the sum of natural number up to n
 // * Write a JavaScript program to compute the sum of an array of integers
 
-    const array = [1, 2, 3, 4, 5, 6]
   
+  // solution with the Recursion function =>
+  const array = [1, 2, 3, 4, 5, 6]
 
+function sum(numbers) {
+  const lastNumber = numbers.pop();
+  if (lastNumber === undefined) { return 0 }
+  return lastNumber + sum(numbers);
+};
+
+console.log(sum(array));
+
+//solution with for loop
     let n = 0;
     let i = 0;
     function sum(array) {
@@ -27,3 +37,5 @@
     
     
     console.log(sum1(array)); //returns 21
+
+    
